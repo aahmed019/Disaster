@@ -1,0 +1,38 @@
+{
+  "name": "disaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aahmed019/disaster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aahmed019/disaster/issues"
+  },
+  "homepage": "https://github.com/aahmed019/disaster#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "scss-loader": "0.0.1",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "sass-loader": "^12.1.0"
+  }
+}
