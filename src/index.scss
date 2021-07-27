@@ -40,12 +40,14 @@
 }
 
 .card{
+    opacity:0;
     border:1px solid black;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+    // transform: translateY(-30px);
     color: black;
     width: 150px;
     height: 200px;
-    transition: 0.5s;
+    transition: all .5s ease-out;
     // background-color: #F7F0F5;
     background-color: #669bbc;
     border-radius: 10px;
@@ -56,8 +58,12 @@
     }
 }
 
-.card-hide{
-    display: none;
+
+.card-show{
+    opacity:1;
+    // transform: translateY(30px);
+    transition: 1.2s;
+    // transition: all .5s ease-out;
 }
 
 .card:hover {

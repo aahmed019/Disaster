@@ -34,20 +34,22 @@
   gap: 20px; }
 
 .card {
+  opacity: 0;
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 black;
   color: black;
   width: 150px;
   height: 200px;
-  transition: 0.5s;
+  transition: all .5s ease-out;
   background-color: #669bbc;
   border-radius: 10px;
   overflow: hidden; }
   .card .card-text {
     padding: 10px; }
 
-.card-hide {
-  display: none; }
+.card-show {
+  opacity: 1;
+  transition: 1.2s; }
 
 .card:hover {
   transform: scale(1.2);
