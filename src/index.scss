@@ -47,7 +47,7 @@
     color: black;
     width: 150px;
     height: 200px;
-    transition: all .5s ease-out;
+    transition: all 1s ease-out;
     // background-color: #F7F0F5;
     background-color: #669bbc;
     border-radius: 10px;
@@ -60,8 +60,12 @@
 
 .card-show{
     opacity:1;
-    transform: translateY(0px);
+    transform: translateX(0px);
     transition: 1.2s;
+}
+
+.card-hide{
+    display: none;
 }
 
 .card:hover {
@@ -77,6 +81,7 @@
     background-color: rgb(240, 44, 44);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
     transform: translateX(-1000px);
+    transition: all 1s ease-out;
     border-radius: 10px;
     width: 300px;
     height: 450px;

@@ -56,7 +56,29 @@ let disasters = [
                 answer : false,
             }
         ]
+    },
+
+    {
+        disaster: {
+            description : "Test",
+        },
+        solutions: [
+            {
+                description : "NO",
+                answer : false,
+            },
+            {
+                description : "YES",
+                answer : true,
+            },
+            {
+                description : "NO",
+                answer : false,
+            }
+        ]
     }
+
+
 ];
 
 export default disasters

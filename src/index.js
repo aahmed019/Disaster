@@ -2,11 +2,17 @@ import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    let playerScore = 2;
-    let disasterScore = 2;
+    let playerScore = 5;
+    let disasterScore = 5;
     let solutionCards = document.querySelectorAll('.card')
     let disasterCard = document.querySelector('.disaster-card')
 
+    for (let i = 0; i < solutionCards.length; i++) {
+        solutionCards[i].addEventListener("click", function(e){
+            answer(this)
+        }, false);
+    }
+    
     document.getElementById('play-button').addEventListener("click", () => {
         play();
     })
@@ -15,47 +21,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function play(){
         let index = Math.floor(Math.random() * disasters.length)
+        // debugger
         const disaster = disasters[index]
-        if(!disaster) alert("no more cards")
+        if(!disaster) console.log("no more cards")
         disasters.splice(index, 1)
 
         disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.
         description
 
         disasterCard.classList.add('card-show')
-        
+
         let j = 0
         let cardIndexes= shuffle([0, 1, 2]);
-        for(var i = 0; i < solutionCards.length; i++) {
-            var card = solutionCards[i];
+        for(let i = 0; i < solutionCards.length; i++) {
+            let card = solutionCards[i];
             card.querySelector('.card-text').innerHTML = disaster.solutions[cardIndexes[j]].description
             card.querySelector('.card-answer').innerHTML = disaster.solutions[cardIndexes[j]].answer
             j++
-            card.classList.add('card-show')
-            card.addEventListener("click", function(e){
-                answer(this)
-            });
+            card.classList.add('card-show') 
         }
     }
 
     function answer(card){
-        // card.classList.add("answer-card")
-        // console.log(card.querySelector('.card-answer').innerHTML === 'true')
-        if(card.querySelector('.card-answer').innerHTML === 'true') disasterScore -= 1
-        else playerScore -= 1
+        if(card.querySelector('.card-answer').innerHTML === 'true') disasterScore--
+        else playerScore--
+
+        // console.log('click')
+        console.log(playerScore + 'player')
+        console.log(disasterScore + 'disaster')
 
         if(playerScore === 0) return lost()
         else if(disasterScore === 0) return won()
 
-        play()
+        for(var i = 0; i < solutionCards.length; i++) {
+            solutionCards[i].removeEventListener("click", function(e){
+                answer(this)
+            }, true);
+        }
+
+        // disasterCard.classList.remove('card-show')
+        disasterCard.classList.remove('card-show')
+        for(let i = 0; i < solutionCards.length; i++) {
+            solutionCards[i].classList.remove('card-show')
+        }
+        setTimeout(function(){
+            play()
+        }, 1000);
     }
 
     function won() {
-        alert('win')
+        disasterCard.classList.add('card-hide')
+        for(var i = 0; i < solutionCards.length; i++) {
+            solutionCards[i].classList.add('card-hide')
+        }
+        console.log('win')
     }
 
     function lost() {
-        alert('lost')
+        disasterCard.classList.add('card-hide')
+        for(var i = 0; i < solutionCards.length; i++) {
+            solutionCards[i].classList.add('card-hide')
+        }
+        console.log('lost')
     }
 
     function shuffle(array) {
