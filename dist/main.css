@@ -46,6 +46,9 @@
   .card .card-text {
     padding: 10px; }
 
+.card-hide {
+  display: none; }
+
 .card:hover {
   transform: scale(1.2);
   box-shadow: 0 4px 8px 0 darkblue;

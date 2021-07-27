@@ -29,11 +29,11 @@ let disasters = [
             },
             {
                 description : "Rush to the food court for the latest deals at McDonalds",
-                answer : true,
+                answer : false,
             },
             {
                 description : "Get to the roof",
-                answer : false,
+                answer : true,
             }
         ]
     },
