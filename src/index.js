@@ -2,10 +2,13 @@ import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    let playerScore = 5;
-    let disasterScore = 5;
+    let playerScore = 1;
+    let disasterScore = 1;
     let solutionCards = document.querySelectorAll('.card')
     let disasterCard = document.querySelector('.disaster-card')
+    let playButton = document.getElementById('play-button')
+    let resetButton = document.getElementById('reset-button')
+    console.log(resetButton)
 
     for (let i = 0; i < solutionCards.length; i++) {
         solutionCards[i].addEventListener("click", function(e){
@@ -14,7 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     document.getElementById('play-button').addEventListener("click", () => {
+        playButton.style.display='none';
         play();
+
     })
 
     
@@ -74,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for(var i = 0; i < solutionCards.length; i++) {
             solutionCards[i].classList.add('card-hide')
         }
+        resetButton.style.display = 'block'
         console.log('win')
     }
 
@@ -82,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for(var i = 0; i < solutionCards.length; i++) {
             solutionCards[i].classList.add('card-hide')
         }
+        resetButton.style.display = 'block'
         console.log('lost')
     }
 
