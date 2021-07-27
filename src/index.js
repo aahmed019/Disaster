@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let playerScore = 2;
     let disasterScore = 2;
+    let solutionCards = document.querySelectorAll('.card')
+    let disasterCard = document.querySelector('.disaster-card')
 
     document.getElementById('play-button').addEventListener("click", () => {
         play();
@@ -17,11 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if(!disaster) alert("no more cards")
         disasters.splice(index, 1)
 
-        let solutionCards = document.querySelectorAll('.card')
-        let disasterCard = document.querySelector('.disaster-card')
         disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.
         description
-        disasterCard.classList.remove('card-hide')
+
+        disasterCard.classList.add('card-show')
+        
         let j = 0
         let cardIndexes= shuffle([0, 1, 2]);
         for(var i = 0; i < solutionCards.length; i++) {
@@ -29,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             card.querySelector('.card-text').innerHTML = disaster.solutions[cardIndexes[j]].description
             card.querySelector('.card-answer').innerHTML = disaster.solutions[cardIndexes[j]].answer
             j++
-            card.classList.remove('card-hide')
             card.classList.add('card-show')
             card.addEventListener("click", function(e){
                 answer(this)

@@ -37,6 +37,7 @@
   opacity: 0;
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 black;
+  transform: translateX(1000px);
   color: black;
   width: 150px;
   height: 200px;
@@ -49,6 +50,7 @@
 
 .card-show {
   opacity: 1;
+  transform: translateY(0px);
   transition: 1.2s; }
 
 .card:hover {
@@ -61,9 +63,15 @@
   color: black;
   background-color: #f02c2c;
   box-shadow: 0 4px 8px 0 black;
+  transform: translateX(-1000px);
   border-radius: 10px;
   width: 300px;
   height: 450px; }
   .disaster-card .card-text {
     padding: 10px; }
+
+.card-show {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1.2s; }
 
