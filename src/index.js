@@ -1,7 +1,14 @@
 import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
-    const disaster = disasters[Math.floor(Math.random() * disasters.length)]
+    
+    let playerScore = 1;
+    let disasterScore = 1;
+
+    let index = Math.floor(Math.random() * disasters.length)
+    const disaster = disasters[index]
+    disasters.splice(index, 1)
+
     let solutionCards = document.querySelectorAll('.card')
     let disasterCard = document.querySelector('.disaster-card')
     disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.description
@@ -20,8 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
     function answer(card){
         // card.classList.add("answer-card")
         // console.log(card.querySelector('.card-answer').innerHTML === 'true')
-        if(card.querySelector('.card-answer').innerHTML === 'true') alert("Correct")
-        else alert("Incorrect")
+        if(card.querySelector('.card-answer').innerHTML === 'true') disasterScore -= 1
+        else playerScore -= 1
+
+        if(playerScore === 0) lost()
+        else if(disasterScore === 0) won()
+
+    }
+
+    function won() {
+        alert('win')
+    }
+
+    function lost() {
+        alert('lost')
     }
 
     function shuffle(array) {
