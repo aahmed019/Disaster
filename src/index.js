@@ -1,10 +1,10 @@
 import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
-    const disaster = shuffle(disasters)[0]
+    const disaster = disasters[Math.floor(Math.random() * disasters.length)]
     let solutionCards = document.querySelectorAll('.card')
     let disasterCard = document.querySelector('.disaster-card')
-    disasterCard.innerHTML= disaster.disaster.description
+    disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.description
     let j = 0
     let cardIndexes= shuffle([0, 1, 2]);
     for(var i = 0; i < solutionCards.length; i++) {

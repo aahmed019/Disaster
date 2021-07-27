@@ -15,14 +15,14 @@
   justify-content: center;
   align-items: center;
   left: 0;
-  background-color: #0e3a01; }
+  background-color: #003049; }
 
 .right {
   display: flex;
   justify-content: center;
   align-items: center;
   right: 0;
-  background-color: red; }
+  background-color: #69140E; }
 
 .centered {
   position: absolute;
@@ -34,19 +34,31 @@
   gap: 20px; }
 
 .card {
-  border: 1px solid white;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 black;
+  color: black;
   width: 150px;
   height: 200px;
   transition: 0.5s;
-  background-color: yellowgreen;
+  background-color: #669bbc;
+  border-radius: 10px;
   overflow: hidden; }
+  .card .card-text {
+    padding: 10px; }
 
 .card:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px 0 darkblue;
   transition: 1.2s; }
 
 .disaster-card {
-  border: 1px solid white;
+  border: 1px solid black;
+  color: black;
+  background-color: #f02c2c;
+  box-shadow: 0 4px 8px 0 black;
+  border-radius: 10px;
   width: 300px;
   height: 450px; }
+  .disaster-card .card-text {
+    padding: 10px; }
 

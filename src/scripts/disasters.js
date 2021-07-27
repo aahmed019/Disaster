@@ -20,19 +20,19 @@ let disasters = [
     },
     {
         disaster: {
-            description : "Letters",
+            description : "An Ocean Crashes into the mall",
         },
         solutions: [
             {
-                description : "Get as close as you can for a selfie.",
+                description : "Keep playing Arcade games",
                 answer : false,
             },
             {
-                description : "Get on a boat to escape",
+                description : "Rush to the food court for the latest deals at McDonalds",
                 answer : true,
             },
             {
-                description : "Swim out of there",
+                description : "Get to the roof",
                 answer : false,
             }
         ]
@@ -40,7 +40,7 @@ let disasters = [
 
     {
         disaster: {
-            description : "An Ocean Crashes into the mall",
+            description : "Letters",
         },
         solutions: [
             {
