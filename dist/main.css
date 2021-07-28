@@ -42,7 +42,7 @@
   width: 150px;
   height: 200px;
   transition: all 1s ease-out;
-  background-color: #669bbc;
+  background-color: #578bac;
   border-radius: 10px;
   overflow: hidden; }
   .card .card-text {
@@ -72,7 +72,7 @@
 .disaster-card {
   border: 1px solid black;
   color: black;
-  background-color: #f02c2c;
+  background-color: #942828;
   box-shadow: 0 4px 8px 0 black;
   transform: translateX(-1000px);
   transition: all 1s ease-out;

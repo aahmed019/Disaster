@@ -2,8 +2,8 @@ import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    let playerScore = 4;
-    let disasterScore = 4;
+    let playerScore = 2;
+    let disasterScore = 2;
     let currentRound = 0;
     let direction;
     let solutionCards = document.querySelectorAll('.card')
