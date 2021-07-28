@@ -1,8 +1,9 @@
 let disasters = [
     {
         disaster: {
-            description : "A Violent Volcano Erupts on your island",
-            picture: "url('https://images.unsplash.com/photo-1619266465172-02a857c3556d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sY2FuaWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80')"
+            description : "Volcano",
+            picture: "url('https://wallpaperaccess.com/full/1231662.jpg')",
+            femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Volcano"
         },
         solutions: [
             {
@@ -21,8 +22,9 @@ let disasters = [
     },
     {
         disaster: {
-            description : "An Ocean Crashes into the mall",
-            picture: "url('https://upload.wikimedia.org/wikipedia/commons/5/55/Large_breaking_wave.jpg')"
+            description : "Tsunami",
+            picture: "url('https://www.desktopbackground.org/p/2014/05/09/759886_wallpapers-tsunamis-bbc-magazine-mega-tsunami-sketch-2-1200x787_1200x787_h.jpg')",
+            femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Tsunami"
         },
         solutions: [
             {
@@ -42,20 +44,43 @@ let disasters = [
 
     {
         disaster: {
-            description : "Letters",
-            picture: "url('https://m.media-amazon.com/images/I/71Dt6NFYowL._AC_SX466_.jpg')"
+            description : "Earthquake",
+            picture: "url('https://previews.123rf.com/images/nchoochat/nchoochat1511/nchoochat151100069/48428635-cracked-ground-earthquake-background-texture.jpg')",
+            femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Earthquake"
         },
         solutions: [
             {
-                description : "A.",
+                description : "Get in your car",
                 answer : false,
             },
             {
-                description : "B",
+                description : "Get into a building",
                 answer : true,
             },
             {
-                description : "C",
+                description : "Stay Outdoors",
+                answer : false,
+            }
+        ]
+    },
+    {
+        disaster: {
+            description : "Floods",
+            picture: "url('https://frac.org/wp-content/uploads/flooded-neighborhood-video-billboard-photo.jpg')",
+            femaLink: "https://community.fema.gov/ProtectiveActions/s/global-search/floods"
+
+        },
+        solutions: [
+            {
+                description : "Get as much water as you can!",
+                answer : false,
+            },
+            {
+                description : "Get to high ground",
+                answer : true,
+            },
+            {
+                description : "Take a dip, you're only young once",
                 answer : false,
             }
         ]
@@ -63,8 +88,53 @@ let disasters = [
 
     {
         disaster: {
-            description : "Test",
-            picture: "url('https://dmzn2b8hkpq8b.cloudfront.net/images/products/515x515/S710744.jpg')"
+            description : "Sharknado",
+            picture: "url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2018/08/sharknado.jpg')",
+            femaLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        solutions: [
+            {
+                description : "NO",
+                answer : false,
+            },
+            {
+                description : "YES",
+                answer : true,
+            },
+            {
+                description : "NO",
+                answer : false,
+            }
+        ]
+    },
+
+    {
+        disaster: {
+            description : "Tornado",
+            picture: "url('https://cdn.wallpapersafari.com/99/60/EuzRKn.jpg')",
+            femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Tornado"
+        },
+        solutions: [
+            {
+                description : "NO",
+                answer : false,
+            },
+            {
+                description : "YES",
+                answer : true,
+            },
+            {
+                description : "NO",
+                answer : false,
+            }
+        ]
+    },
+
+    {
+        disaster: {
+            description : "Thunderstorm",
+            picture: "url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80')",
+            femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Thunderstorm-Lightning-and-Hail"
         },
         solutions: [
             {

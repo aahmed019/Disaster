@@ -52,6 +52,49 @@ table {
 
 
 //END OF RESET
+
+.game-area{
+    // position: relative;
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    button{
+        z-index: 10;
+        background-color:black;
+        color:white;
+        width: 120px;
+        height: 30px;
+        font-size:20px;
+        outline:none;
+        border-radius: 10px;
+
+    }
+    .endgame{
+        text-align:center;
+        z-index: 10;
+    }
+    #endgame-message{
+        z-index: 10;
+        font-size: 20px;
+        padding-bottom: 10px;
+        color:white;
+    }
+}
+
+.lives{
+    width:100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 11;
+    padding-top:40px;
+    font-size: 20px;
+    color:white;
+}
+
 .split {
     height: 100%;
     width: 50%;
@@ -76,15 +119,12 @@ table {
     justify-content: center;
     align-items: center;
     right: 0;
-    background-image: none;
-    background-color: #69140E;
-}
-
-.right-background {
-    // opacity: 1;
+    background-image: url('https://cdn.discordapp.com/attachments/163769380222664704/870001639099080764/unknown.png');
+    // background-color: #69140E;
     background-size: 100% 100%;
     transition: background-image 0.9s;
 }
+
 
 .centered {
     position: absolute;
@@ -172,12 +212,19 @@ table {
     }
 }
 
+.disaster-card:hover{
+    // transform: rotateY(180deg);
+    // transition: all 1.5s ease-out;
+}
+
 .disaster-link{
     display: flex;
     justify-content:center;
     width: 250px;
     i{
-        font-size:25px;
+        text-decoration: none;
+        color: white;
+        font-size:35px;
     }
 }
 
@@ -196,3 +243,4 @@ table {
     transform: translateY(0px);
     transition: 1.2s;
 }
+

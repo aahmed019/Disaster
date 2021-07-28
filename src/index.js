@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let resetButton = document.getElementById('reset-button')
     let leftSide = document.querySelector('.left')
     let rightSide = document.querySelector('.right')
-
-
+    let femaIcon = document.getElementById('fema-link')
+    let endmessage = document.getElementById('endgame-message')
+    
     
     for (let i = 0; i < solutionCards.length; i++) {
         solutionCards[i].addEventListener("click", function(e){
@@ -34,18 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const disaster = disasters[index]
         if(!disaster) console.log("no more cards")
         disasters.splice(index, 1)
-        // disasterCard.classList.remove('card-show')
-    rightSide.classList.add('right-background')
-
-        
         disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.
         description
-
         disasterCard.classList.remove('disaster-'+ direction)
         disasterCard.classList.add('card-show')
         
         rightSide.style.backgroundImage = disaster.disaster.picture
-        
+        femaIcon.href = disaster.disaster.femaLink
+
         let j = 0
         let cardIndexes= shuffle([0, 1, 2]);
         for(let i = 0; i < solutionCards.length; i++) {
@@ -99,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             solutionCards[i].classList.add('card-hide')
         }
         resetButton.style.display = 'block'
+        endmessage.innerHTML = 'You Win!'
         console.log('win')
     }
 
@@ -109,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             solutionCards[i].classList.add('card-hide')
         }
         resetButton.style.display = 'block'
+        endmessage.innerHTML = 'You Lost!'
         console.log('lost')
     }
 
