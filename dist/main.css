@@ -48,6 +48,14 @@
   .card .card-text {
     padding: 10px; }
 
+.card-left {
+  transform: translateX(-1000px);
+  transition: 1.2s; }
+
+.card-right {
+  transform: translateX(1000px);
+  transition: 1.2s; }
+
 .card-show {
   opacity: 1;
   transform: translateX(0px);
@@ -73,6 +81,14 @@
   height: 450px; }
   .disaster-card .card-text {
     padding: 10px; }
+
+.disaster-left {
+  transform: translateX(1000px);
+  transition: 1.2s; }
+
+.disaster-right {
+  transform: translateX(-1000px);
+  transition: 1.2s; }
 
 .card-show {
   opacity: 1;

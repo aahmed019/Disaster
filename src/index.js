@@ -2,8 +2,10 @@ import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    let playerScore = 1;
-    let disasterScore = 1;
+    let playerScore = 4;
+    let disasterScore = 4;
+    let currentRound = 0;
+    let direction;
     let solutionCards = document.querySelectorAll('.card')
     let disasterCard = document.querySelector('.disaster-card')
     let playButton = document.getElementById('play-button')
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.
         description
 
+        disasterCard.classList.remove('disaster-'+ direction)
         disasterCard.classList.add('card-show')
 
         let j = 0
@@ -43,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
             card.querySelector('.card-text').innerHTML = disaster.solutions[cardIndexes[j]].description
             card.querySelector('.card-answer').innerHTML = disaster.solutions[cardIndexes[j]].answer
             j++
-            card.classList.add('card-show') 
+            card.classList.remove('card-'+direction)
+            card.classList.add('card-show')
         }
     }
 
@@ -58,16 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
         if(playerScore === 0) return lost()
         else if(disasterScore === 0) return won()
 
-        for(var i = 0; i < solutionCards.length; i++) {
-            solutionCards[i].removeEventListener("click", function(e){
-                answer(this)
-            }, true);
+        
+        switch (currentRound % 2) {
+            case 0:
+                direction = 'left'
+                break;
+            default:
+                direction = 'right'
+                break;
         }
+                currentRound++
+        console.log(currentRound)
 
-        // disasterCard.classList.remove('card-show')
         disasterCard.classList.remove('card-show')
+        disasterCard.classList.add('disaster-'+direction)
+        console.log('disaster-'+direction)
         for(let i = 0; i < solutionCards.length; i++) {
             solutionCards[i].classList.remove('card-show')
+            solutionCards[i].classList.add('card-'+direction)
         }
         setTimeout(function(){
             play()

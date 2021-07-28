@@ -48,7 +48,6 @@
     width: 150px;
     height: 200px;
     transition: all 1s ease-out;
-    // background-color: #F7F0F5;
     background-color: #669bbc;
     border-radius: 10px;
     overflow: hidden;
@@ -58,6 +57,16 @@
     }
 }
 
+.card-left{
+    transform: translateX(-1000px);
+    transition: 1.2s;
+}
+
+.card-right{
+    transform: translateX(1000px);
+    transition: 1.2s;
+}
+
 .card-show{
     opacity:1;
     transform: translateX(0px);
@@ -65,7 +74,7 @@
 }
 
 .card-hide{
-    display: none;
+    display:none;
 }
 
 .card:hover {
@@ -89,6 +98,16 @@
     .card-text{
         padding: 10px;
     }
+}
+
+.disaster-left{
+    transform: translateX(1000px);
+    transition: 1.2s;
+}
+
+.disaster-right{
+    transform: translateX(-1000px);
+    transition: 1.2s;
 }
 
 .card-show{
