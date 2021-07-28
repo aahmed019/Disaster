@@ -2,16 +2,19 @@ import disasters from "./scripts/disasters"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    let playerScore = 2;
-    let disasterScore = 2;
+    let playerScore = 3;
+    let disasterScore = 3;
     let currentRound = 0;
     let direction;
     let solutionCards = document.querySelectorAll('.card')
     let disasterCard = document.querySelector('.disaster-card')
     let playButton = document.getElementById('play-button')
     let resetButton = document.getElementById('reset-button')
-    console.log(resetButton)
+    let leftSide = document.querySelector('.left')
+    let rightSide = document.querySelector('.right')
 
+
+    
     for (let i = 0; i < solutionCards.length; i++) {
         solutionCards[i].addEventListener("click", function(e){
             answer(this)
@@ -21,24 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('play-button').addEventListener("click", () => {
         playButton.style.display='none';
         play();
-
+        
     })
-
     
-
+    
+    
     function play(){
         let index = Math.floor(Math.random() * disasters.length)
-        // debugger
         const disaster = disasters[index]
         if(!disaster) console.log("no more cards")
         disasters.splice(index, 1)
+        // disasterCard.classList.remove('card-show')
+    rightSide.classList.add('right-background')
 
+        
         disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.
         description
 
         disasterCard.classList.remove('disaster-'+ direction)
         disasterCard.classList.add('card-show')
-
+        
+        rightSide.style.backgroundImage = disaster.disaster.picture
+        
         let j = 0
         let cardIndexes= shuffle([0, 1, 2]);
         for(let i = 0; i < solutionCards.length; i++) {
@@ -76,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         disasterCard.classList.remove('card-show')
         disasterCard.classList.add('disaster-'+direction)
-        console.log('disaster-'+direction)
         for(let i = 0; i < solutionCards.length; i++) {
             solutionCards[i].classList.remove('card-show')
             solutionCards[i].classList.add('card-'+direction)
@@ -88,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function won() {
         disasterCard.classList.add('card-hide')
+        rightSide.style.backgroundImage = ''
         for(var i = 0; i < solutionCards.length; i++) {
             solutionCards[i].classList.add('card-hide')
         }
@@ -97,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function lost() {
         disasterCard.classList.add('card-hide')
+        rightSide.style.backgroundImage = ''
         for(var i = 0; i < solutionCards.length; i++) {
             solutionCards[i].classList.add('card-hide')
         }

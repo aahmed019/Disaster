@@ -1,6 +1,53 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 .split {
   height: 100%;
   width: 50%;
@@ -22,7 +69,12 @@
   justify-content: center;
   align-items: center;
   right: 0;
+  background-image: none;
   background-color: #69140E; }
+
+.right-background {
+  background-size: 100% 100%;
+  transition: background-image 0.9s; }
 
 .centered {
   position: absolute;
@@ -38,7 +90,7 @@
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 black;
   transform: translateX(1000px);
-  color: black;
+  color: white;
   width: 150px;
   height: 200px;
   transition: all 1s ease-out;
@@ -71,16 +123,30 @@
 
 .disaster-card {
   border: 1px solid black;
-  color: black;
+  color: white;
   background-color: #942828;
   box-shadow: 0 4px 8px 0 black;
   transform: translateX(-1000px);
   transition: all 1s ease-out;
   border-radius: 10px;
   width: 300px;
-  height: 450px; }
+  height: 450px;
+  display: column; }
   .disaster-card .card-text {
     padding: 10px; }
+  .disaster-card .disaster-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 420px; }
+
+.disaster-link {
+  display: flex;
+  justify-content: center;
+  width: 250px; }
+  .disaster-link i {
+    font-size: 25px; }
 
 .disaster-left {
   transform: translateX(1000px);

@@ -2,6 +2,7 @@ let disasters = [
     {
         disaster: {
             description : "A Violent Volcano Erupts on your island",
+            picture: "url('https://images.unsplash.com/photo-1619266465172-02a857c3556d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sY2FuaWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80')"
         },
         solutions: [
             {
@@ -21,6 +22,7 @@ let disasters = [
     {
         disaster: {
             description : "An Ocean Crashes into the mall",
+            picture: "url('https://upload.wikimedia.org/wikipedia/commons/5/55/Large_breaking_wave.jpg')"
         },
         solutions: [
             {
@@ -41,6 +43,7 @@ let disasters = [
     {
         disaster: {
             description : "Letters",
+            picture: "url('https://m.media-amazon.com/images/I/71Dt6NFYowL._AC_SX466_.jpg')"
         },
         solutions: [
             {
@@ -61,6 +64,7 @@ let disasters = [
     {
         disaster: {
             description : "Test",
+            picture: "url('https://dmzn2b8hkpq8b.cloudfront.net/images/products/515x515/S710744.jpg')"
         },
         solutions: [
             {
