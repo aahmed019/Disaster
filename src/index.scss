@@ -85,6 +85,7 @@ table {
 }
 
 .lives{
+    opacity: 0;
     width:100%;
     position: absolute;
     display: flex;
@@ -147,7 +148,7 @@ table {
     color: white;
     width: 150px;
     height: 200px;
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     background-color: #578bac;
     // background-color: #669bbc;
     border-radius: 10px;
@@ -213,6 +214,7 @@ table {
 }
 
 .disaster-card:hover{
+    opacity: .4;
     // transform: rotateY(180deg);
     // transition: all 1.5s ease-out;
 }
@@ -243,4 +245,5 @@ table {
     transform: translateY(0px);
     transition: 1.2s;
 }
+
 

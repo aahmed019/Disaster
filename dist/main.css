@@ -74,6 +74,7 @@ table {
     color: white; }
 
 .lives {
+  opacity: 0;
   width: 100%;
   position: absolute;
   display: flex;
@@ -125,7 +126,7 @@ table {
   color: white;
   width: 150px;
   height: 200px;
-  transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
   background-color: #578bac;
   border-radius: 10px;
   overflow: hidden; }
@@ -172,6 +173,9 @@ table {
     justify-content: space-between;
     align-items: center;
     height: 420px; }
+
+.disaster-card:hover {
+  opacity: .4; }
 
 .disaster-link {
   display: flex;

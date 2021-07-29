@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let rightSide = document.querySelector('.right')
     let femaIcon = document.getElementById('fema-link')
     let endmessage = document.getElementById('endgame-message')
+    let scores = document.querySelector('.lives')
+    let playerLife = document.querySelector('.player')
+    let disasterLife = document.querySelector('.non-player')
     
     
     for (let i = 0; i < solutionCards.length; i++) {
@@ -31,6 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
     function play(){
+
+        playerLife.innerHTML = 'Player Score: ' + playerScore.toString()
+
+        disasterLife.innerHTML = 'Disaster Score: ' + disasterScore.toString()
+
         let index = Math.floor(Math.random() * disasters.length)
         const disaster = disasters[index]
         if(!disaster) console.log("no more cards")
@@ -42,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         rightSide.style.backgroundImage = disaster.disaster.picture
         femaIcon.href = disaster.disaster.femaLink
+        scores.style.opacity = 1
 
         let j = 0
         let cardIndexes= shuffle([0, 1, 2]);
@@ -56,8 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function answer(card){
-        if(card.querySelector('.card-answer').innerHTML === 'true') disasterScore--
-        else playerScore--
+        if(card.querySelector('.card-answer').innerHTML === 'true'){
+            disasterScore--
+            card.style.backgroundColor = 'green'
+        }
+        else {
+            playerScore--
+            card.style.backgroundColor = 'gray'
+        }
+
+        playerLife.innerHTML = 'Player Score: ' + playerScore.toString()
+        disasterLife.innerHTML = 'Disaster Score: ' + disasterScore.toString()
 
         // console.log('click')
         console.log(playerScore + 'player')
@@ -80,13 +98,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         disasterCard.classList.remove('card-show')
         disasterCard.classList.add('disaster-'+direction)
-        for(let i = 0; i < solutionCards.length; i++) {
-            solutionCards[i].classList.remove('card-show')
-            solutionCards[i].classList.add('card-'+direction)
-        }
+        
+        setTimeout(function(){
+            for(let i = 0; i < solutionCards.length; i++) {
+                solutionCards[i].classList.remove('card-show')
+                solutionCards[i].classList.add('card-'+direction)
+            }
+            card.style.backgroundColor = '#578bac'
+            
+        }, 1200);
+
         setTimeout(function(){
             play()
-        }, 1000);
+        }, 2000);
     }
 
     function won() {
