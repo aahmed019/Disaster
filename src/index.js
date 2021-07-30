@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
             solutionCards[i].classList.add('card-hide')
         }
         resetButton.style.display = 'block'
-        endmessage.innerHTML = 'You Win!'
+        endmessage.innerHTML = "You're FEMA prepared 😍!"
         console.log('win')
     }
 
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             solutionCards[i].classList.add('card-hide')
         }
         resetButton.style.display = 'block'
-        endmessage.innerHTML = 'You Lost!'
+        endmessage.innerHTML = "You're just not FEMA prepared 😞!"
         console.log('lost')
     }
 
