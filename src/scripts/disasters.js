@@ -88,7 +88,7 @@ let disasters = [
 
     {
         disaster: {
-            description : "Enjoying a nice fishing trip, fishing with friends and family catching a good amount of.... wait what's that on the horizon? IT'S A TORNADO! but wait there's something inside the tornado... SHARKS ARE INSIDE THE TORNADO, IT'S A SHARKNADO",
+            description : "Enjoying a nice fishing trip, fishing with friends and family catching a good amount of.... wait what's that on the horizon? Oh it's a tornado, but wait there's something inside the tornado... SHARKS ARE INSIDE THE TORNADO, IT'S A SHARKNADO",
             picture: "url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2018/08/sharknado.jpg')",
             femaLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },
@@ -110,47 +110,47 @@ let disasters = [
 
     {
         disaster: {
-            description : "On your farm in Kentucky, you're in the chicken coop collecting the eggs, a strong gust of wind every once in a while. Oh would you look at that it's not a Sharknado, it's a regular tornado ",
+            description : "On your farm in Kentucky, you're in the chicken coop collecting the eggs, a strong gust of wind every once in a while. Oh would you look at that it's not a Sharknado, it's a regular tornado.",
             picture: "url('https://cdn.wallpapersafari.com/99/60/EuzRKn.jpg')",
             femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Tornado"
         },
         solutions: [
             {
-                description : "NO",
+                description : "Who cares, it's not a sharknado. Continue getting your eggs.",
                 answer : false,
             },
             {
-                description : "YES",
+                description : "Secure yourself and your family in a basement or safe place in the community.",
                 answer : true,
             },
             {
-                description : "NO",
+                description : "Run towards the tornado so you can have an adventure like Dorthy. Oh wait that was Kansas. Can you believe Kansas is a state? ",
                 answer : false,
             }
         ]
     },
 
-    {
-        disaster: {
-            description : "Thunderstorm",
-            picture: "url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80')",
-            femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Thunderstorm-Lightning-and-Hail"
-        },
-        solutions: [
-            {
-                description : "NO",
-                answer : false,
-            },
-            {
-                description : "YES",
-                answer : true,
-            },
-            {
-                description : "NO",
-                answer : false,
-            }
-        ]
-    }
+    // {
+    //     disaster: {
+    //         description : "Thunderstorm",
+    //         picture: "url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80')",
+    //         femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Thunderstorm-Lightning-and-Hail"
+    //     },
+    //     solutions: [
+    //         {
+    //             description : "NO",
+    //             answer : false,
+    //         },
+    //         {
+    //             description : "YES",
+    //             answer : true,
+    //         },
+    //         {
+    //             description : "NO",
+    //             answer : false,
+    //         }
+    //     ]
+    // }
 
 
 ];

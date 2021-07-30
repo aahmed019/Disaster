@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let index = Math.floor(Math.random() * disasters.length)
         const disaster = disasters[index]
-        if(!disaster) console.log("no more cards")
         disasters.splice(index, 1)
         disasterCard.querySelector('.card-text').innerHTML= disaster.disaster.
         description
@@ -77,10 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
         playerLife.innerHTML = 'Player Score: ' + playerScore.toString()
         disasterLife.innerHTML = 'Disaster Score: ' + disasterScore.toString()
 
-        // console.log('click')
-        console.log(playerScore + 'player')
-        console.log(disasterScore + 'disaster')
-
         if(playerScore === 0) return lost()
         else if(disasterScore === 0) return won()
 
@@ -94,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 break;
         }
                 currentRound++
-        console.log(currentRound)
+
 
         disasterCard.classList.remove('card-show')
         disasterCard.classList.add('disaster-'+direction)
@@ -121,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         resetButton.style.display = 'block'
         endmessage.innerHTML = "You're FEMA prepared 😍!"
-        console.log('win')
     }
 
     function lost() {
@@ -132,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         resetButton.style.display = 'block'
         endmessage.innerHTML = "You're just not FEMA prepared 😞!"
-        console.log('lost')
     }
 
     function shuffle(array) {
