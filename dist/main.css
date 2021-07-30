@@ -54,7 +54,8 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  display: flex; }
   .game-area button {
     z-index: 10;
     background-color: black;
@@ -65,12 +66,18 @@ table {
     outline: none;
     border-radius: 10px; }
   .game-area .endgame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    z-index: 10; }
+    z-index: 10;
+    flex-direction: column-reverse;
+    align-items: center; }
   .game-area #endgame-message {
     z-index: 10;
     font-size: 20px;
-    padding-bottom: 10px;
+    padding-top: 10px;
     color: white; }
 
 .lives {
@@ -80,9 +87,11 @@ table {
   display: flex;
   justify-content: space-evenly;
   z-index: 11;
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 20px;
-  color: white; }
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .split {
   height: 100%;
@@ -131,7 +140,8 @@ table {
   border-radius: 10px;
   overflow: hidden; }
   .card .card-text {
-    padding: 10px; }
+    padding: 10px;
+    line-height: 18px; }
 
 .card-left {
   transform: translateX(-1000px);
@@ -166,7 +176,9 @@ table {
   height: 450px;
   display: column; }
   .disaster-card .card-text {
-    padding: 10px; }
+    padding: 10px;
+    line-height: 25px;
+    font-size: 20px; }
   .disaster-card .disaster-content {
     display: flex;
     flex-direction: column;

@@ -65,22 +65,22 @@ let disasters = [
     },
     {
         disaster: {
-            description : "Floods",
+            description : "You can see clearly now the rain is gone since you took your Clariton. But it flooded your entire neighborhood and everyone. What do you do?",
             picture: "url('https://frac.org/wp-content/uploads/flooded-neighborhood-video-billboard-photo.jpg')",
             femaLink: "https://community.fema.gov/ProtectiveActions/s/global-search/floods"
 
         },
         solutions: [
             {
-                description : "Get as much water as you can!",
+                description : "Try to hoard the water because after 10 years it 'flood water' might be worth something.",
                 answer : false,
             },
             {
-                description : "Get to high ground",
+                description : "Get to the roof or to a high area and wait for help.",
                 answer : true,
             },
             {
-                description : "Take a dip, you're only young once",
+                description : "Take a dip and swim in the flood water. You're only young once.",
                 answer : false,
             }
         ]
@@ -88,21 +88,21 @@ let disasters = [
 
     {
         disaster: {
-            description : "Sharknado",
+            description : "Enjoying a nice fishing trip, fishing with friends and family catching a good amount of.... wait what's that on the horizon? IT'S A TORNADO! but wait there's something inside the tornado... SHARKS ARE INSIDE THE TORNADO, IT'S A SHARKNADO",
             picture: "url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2018/08/sharknado.jpg')",
             femaLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },
         solutions: [
             {
-                description : "NO",
+                description : "Sacrific one of your family or friends to appease the shark gods and hopefully they will spare you",
                 answer : false,
             },
             {
-                description : "YES",
+                description : "Try to take a shark down because it'll be cool and you saw that guy in jaws take one down",
                 answer : true,
             },
             {
-                description : "NO",
+                description : "Abandon your family and dive into the water sending your thoughts and prayers",
                 answer : false,
             }
         ]
@@ -110,7 +110,7 @@ let disasters = [
 
     {
         disaster: {
-            description : "Tornado",
+            description : "On your farm in Kentucky, you're in the chicken coop collecting the eggs, a strong gust of wind every once in a while. Oh would you look at that it's not a Sharknado, it's a regular tornado ",
             picture: "url('https://cdn.wallpapersafari.com/99/60/EuzRKn.jpg')",
             femaLink: "https://community.fema.gov/ProtectiveActions/s/article/Tornado"
         },
