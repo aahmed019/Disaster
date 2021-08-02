@@ -213,8 +213,11 @@ table {
   transition: 1.2s; }
 
 .user-instructions {
+  background-color: black;
+  border-radius: 24px;
+  padding: 10px;
   width: 400px;
-  color: white !important;
+  color: white;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
@@ -224,18 +227,23 @@ table {
   line-height: 30px;
   top: 0;
   transform: translateY(-1000px);
-  transition: 1s; }
+  transition: transform 1s; }
+
+.user-instructions:hover {
+  color: red; }
 
 .open-instructions {
   transform: translateY(500px);
   transition: 1.2s; }
 
 footer {
+  background: black;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  bottom: 0; }
+  gap: 100px;
+  bottom: 0;
+  width: 100%; }
   footer i {
     font-size: 50px;
-    color: black; }
+    color: white; }
 
