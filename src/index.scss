@@ -261,4 +261,33 @@ table {
     transition: 1.2s;
 }
 
+.user-instructions{
+    width: 400px;
+    color: white !important;
+    display:flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 10;
+    font-size: 20px;
+    text-align: center;
+    line-height:30px;
+    top: 0;
+    transform: translateY(-1000px);
+    transition: 1s;
+}
 
+.open-instructions{
+    transform: translateY(500px);
+    transition: 1.2s;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    bottom: 0;
+    i{
+        font-size:50px;
+        color: rgb(0, 0, 0);
+    }
+}

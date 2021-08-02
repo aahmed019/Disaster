@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let scores = document.querySelector('.lives')
     let playerLife = document.querySelector('.player')
     let disasterLife = document.querySelector('.non-player')
+    let instructions = document.querySelector('.user-instructions')
     
     
     for (let i = 0; i < solutionCards.length; i++) {
@@ -29,6 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         playButton.style.display='none';
         play();
         
+    })
+
+    document.getElementById('instructions-button').addEventListener("click", () => {
+        instructions.classList.toggle('open-instructions')
     })
     
     
